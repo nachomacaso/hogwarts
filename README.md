@@ -1,4 +1,8 @@
-## Take home assessment for VacayHome Connect
+## Hogwarts
+
+This is a take home assessment for VacayHome Connect.  
+
+I created a simple web application that creates, updates, and deletes students of Hogwarts and/or the courses they are enrolled in.
 
 ## Available Scripts
 
