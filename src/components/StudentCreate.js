@@ -11,6 +11,7 @@ import Grid from '@material-ui/core/Grid';
 import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Typography from '@material-ui/core/Typography';
+import '../styles/index.css';
 
 const styles = theme => ({
   container: {
@@ -82,20 +83,25 @@ const courseNames = [
 ];
 
 class StudentCreate extends React.Component {
-  state = {
-    name: '',
-    age: '',
-    house: 'Gryffindor',
-    muggle: 'false',
-    courses: [
-      { id: "1", name: "Transfiguration", enrolled: 'false' },
-      { id: "2", name: "Charms", enrolled: 'false' },
-      { id: "3", name: "Potions", enrolled: 'false'},
-      { id: "4", name: "History of Magic", enrolled: 'false' },
-      { id: "5", name: "Defense Against the Dark Arts", enrolled: 'false' },
-      { id: "6", name: "Herbology", enrolled: 'false' }
-    ] 
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: '',
+      age: '',
+      house: 'Gryffindor',
+      muggle: 'false',
+      courses: [
+        { id: "1", name: "Transfiguration", enrolled: 'false' },
+        { id: "2", name: "Charms", enrolled: 'false' },
+        { id: "3", name: "Potions", enrolled: 'false'},
+        { id: "4", name: "History of Magic", enrolled: 'false' },
+        { id: "5", name: "Defense Against the Dark Arts", enrolled: 'false' },
+        { id: "6", name: "Herbology", enrolled: 'false' }
+      ] 
+    };
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  
 
   handleChange = name => event => {
     if(name === 'muggle') {
@@ -113,9 +119,9 @@ class StudentCreate extends React.Component {
     else {
       this.setState({ [name]: event.target.value });
     }
-  };
+  }
 
-  handleSubmit = () => {
+  handleSubmit() {
     let newStudent = this.state;
     let studentData = localStorage.getItem('students');
     let copyStudents = JSON.parse(studentData);
@@ -123,7 +129,7 @@ class StudentCreate extends React.Component {
     newStudent['id'] = (parseInt(idx) + 1).toString();
     copyStudents.push(newStudent);
     localStorage.setItem('students', JSON.stringify(copyStudents));
-  };
+  }
 
   render() {
     const { classes } = this.props;
@@ -221,7 +227,7 @@ class StudentCreate extends React.Component {
               ))}
             </Grid>
             <div style={{width: '100%', padding: '15px'}}>
-              <Button variant="contained" color="secondary" onClick={this.handleSubmit} className={classes.button} href='/students'>
+              <Button variant="contained" color="secondary" onClick={this.handleSubmit} className={classes.button} id="create-submit" href='/students'>
                 Create
               </Button>
             </div>

@@ -44,8 +44,6 @@ class StudentIndex extends Component {
   constructor(props) {
     super(props);
     this.state = { students: [] };
-    this.handleClick = this.handleClick.bind(this);
-    this.handleDelete = this.handleDelete.bind(this);    
   }
 
   componentWillMount = () => {

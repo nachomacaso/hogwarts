@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StudentCreate should render correctly 1`] = `
+<StudentCreate
+  classes={
+    Object {
+      "button": "StudentCreate-button-12",
+      "container": "StudentCreate-container-6",
+      "dense": "StudentCreate-dense-8",
+      "grid": "StudentCreate-grid-14",
+      "menu": "StudentCreate-menu-9",
+      "paper": "StudentCreate-paper-11",
+      "subHeader": "StudentCreate-subHeader-13",
+      "textField": "StudentCreate-textField-7",
+      "title": "StudentCreate-title-10",
+    }
+  }
+/>
+`;
+
+exports[`StudentEdit should render correctly 1`] = `
+<StudentEdit
+  classes={
+    Object {
+      "button": "StudentEdit-button-21",
+      "container": "StudentEdit-container-15",
+      "dense": "StudentEdit-dense-17",
+      "grid": "StudentEdit-grid-23",
+      "menu": "StudentEdit-menu-18",
+      "paper": "StudentEdit-paper-20",
+      "subHeader": "StudentEdit-subHeader-22",
+      "textField": "StudentEdit-textField-16",
+      "title": "StudentEdit-title-19",
+    }
+  }
+/>
+`;
+
+exports[`StudentIndex should render correctly 1`] = `
+<StudentIndex
+  classes={
+    Object {
+      "grow": "StudentIndex-grow-2",
+      "margin": "StudentIndex-margin-5",
+      "menuButton": "StudentIndex-menuButton-3",
+      "root": "StudentIndex-root-1",
+      "title": "StudentIndex-title-4",
+    }
+  }
+/>
+`;

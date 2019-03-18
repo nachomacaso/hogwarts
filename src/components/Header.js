@@ -7,6 +7,7 @@ import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import OfflineBoltIcon from '@material-ui/icons/OfflineBolt';
+import '../styles/index.css';
 
 const styles = {
   root: {
